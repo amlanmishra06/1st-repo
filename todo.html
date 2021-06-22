@@ -1,0 +1,25 @@
+<!DOCTYPE html>                                                  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+</head>
+<body> 
+    <h1>TO DO LIST</h1>
+    
+    <div id='todo'></div>
+    <input type="text" name="box" id="box">
+    <button type="button" id="boxbutton">submit</button>
+    <script>
+        document.querySelector('#boxbutton').onclick=function(e){
+            console.log("hi");
+            console.log(document.querySelector('#box').value);
+            //console.log(e.target.elements.box.value);
+            var html="";
+            html+=`<li>${document.querySelector('#box').value}</li>`
+            document.getElementById('todo').innerHTML+=html;
+        }
+    </script>
+</body>
+</html>
